@@ -11,8 +11,6 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
 {
     public class MovieEditViewModel
     {
-        private readonly RepositoryFactory repositoryFactory;
-
         public string Name { get; set; }
         public int DirectorId { get; set; }
         public SelectList Directors { get; set; }
@@ -25,7 +23,7 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
             this.Directors = GetDirectorList(repositoryFactory);
         }
 
-        public MovieEditViewModel(int id)
+        public MovieEditViewModel(int id, RepositoryFactory repositoryFactory)
         {
             Movie movie=repositoryFactory.GetMovieRepository().GetById(id);
             //this.DirectorId = movie.Director.Id;

@@ -44,7 +44,6 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
             return repositoryFactory.GetDirectorRepository()
                 .GetModels()
                 .Select(d => new SelectListItem(d.FullName, d.Id.ToString(), d.Id == this.DirectorId));
-            //return new SelectList(directors, "Id", "FullName", this.DirectorId);
         }
     }
 }
