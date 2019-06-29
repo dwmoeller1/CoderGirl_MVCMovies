@@ -12,6 +12,7 @@ namespace CoderGirl_MVCMovies.Data
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MovieRating> MovieRatings { get; set; }
         public DbSet<Director> Directors { get; set; }
+        public DbSet<DirectorMovie> DirectorMovies { get; set; }
 
         public MoviesDbContext(DbContextOptions<MoviesDbContext> options)
             : base(options) {   }

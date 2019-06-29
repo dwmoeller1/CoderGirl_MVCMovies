@@ -28,7 +28,7 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
         public MovieEditViewModel(int id)
         {
             Movie movie=repositoryFactory.GetMovieRepository().GetById(id);
-            this.DirectorId = movie.Director.Id;
+            //this.DirectorId = movie.Director.Id;
             this.Year = movie.Year;
             this.Name = movie.Name;
         }
@@ -39,7 +39,7 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
             {
                 Id = id,
                 Name = this.Name,
-                DirectorId = this.DirectorId,
+                //DirectorId = this.DirectorId,
                 Year = this.Year
             };
             repositoryFactory.GetMovieRepository().Save(movie);

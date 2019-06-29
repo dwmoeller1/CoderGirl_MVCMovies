@@ -28,7 +28,7 @@ namespace CoderGirl_MVCMovies.ViewModels.Movies
             Models.Movie movie = new Models.Movie
             {
                 Name = this.Name,
-                DirectorId = this.DirectorId,
+                //DirectorId = this.DirectorId,
                 Year = this.Year
             };
             repositoryFactory.GetMovieRepository().Save(movie);
