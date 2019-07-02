@@ -24,11 +24,11 @@
                     <label>@director.FullName</label>
                     @if (Model.DirectorIds.Contains(director.Id))
                     {
-                        <input type="checkbox" asp-for="DirectorIds" value="@director.Id" checked/>
+                        <input type="checkbox" name="DirectorIds" value="@director.Id" checked/>
                     }
                     else
                     {
-                        <input type="checkbox" asp-for="DirectorIds" value="@director.Id" />
+                        <input type="checkbox" name="DirectorIds" value="@director.Id" />
                     }
                 }
             </div>
